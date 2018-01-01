@@ -43,7 +43,7 @@ default
     {
         if ( id != NULL_KEY )
         {
-            say("@sendchannel="+(string)channel+"=add");
+            say("@sendchannel:"+(string)channel+"=add");
         }
     }
     timer()
