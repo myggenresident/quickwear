@@ -95,7 +95,7 @@ default
                 return;
             if ( a1 == "lock" )
             {
-                is_rlv_locked = 1;
+                is_locked_on = 1;
                 say( "@detach=n" );
                 say( "Locked on." );
                 return;
@@ -103,7 +103,7 @@ default
             else
             if ( a1 == "unlock" )
             {
-                is_rlv_locked = 0;
+                is_locked_on = 0;
                 say( "@detach=y" );
                 say( "Unlocked." );
                 return;
@@ -133,13 +133,13 @@ default
             else
             {
                 say(
-                    "Valid commands are:\n".
-                    "  find  : searches for substrings in your #RLV\n".
-                    "  wear  : searches as above and wears the resulting folder if there is just a single folder which matches.\n".
-                    "  1     : As wear, but unwears the same folder after 1 minute.\n".
-                    "  5     : As wear, but unwears the same folder after 5 minutes.\n"
-                    "  unwear: Just as wear, just unwears instead.\n".
-                    "  lock  : RLV locks the prim, so it can not be detached.\n".
+                    "Valid commands are:\n" +
+                    "  find  : searches for substrings in your #RLV\n" +
+                    "  wear  : searches as above and wears the resulting folder if there is just a single folder which matches.\n" +
+                    "  1     : As wear, but unwears the same folder after 1 minute.\n" +
+                    "  5     : As wear, but unwears the same folder after 5 minutes.\n" +
+                    "  unwear: Just as wear, just unwears instead.\n" +
+                    "  lock  : RLV locks the prim, so it can not be detached.\n" +
                     "  unlock: Removes the RLV lock."
                 );
                 return;
